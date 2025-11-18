@@ -1,0 +1,55 @@
+[sway]
+enable					= true
+config_dir				= "$HOME/.config/i3/config"
+
+[sway.client]
+focused.border			= "#285577"
+focused.background		= "#222222"
+focused.text			= "#66a0cc"
+focused.indicator		= "#2d5f86"
+focused.child_border	= "#285577"
+focused_inactive.border			= "#333333"
+focused_inactive.background		= "#5f676a"
+focused_inactive.text			= "#ffffff"
+focused_inactive.indicator		= "#484e50"
+focused_inactive.child_border	= "#5f676a"
+unfocused.border		= "#333333"
+unfocused.background	= "#111111"
+unfocused.text			= "#888888"
+unfocused.indicator		= "#292d2e"
+unfocused.child_border	= "#222222"
+urgent.border		= "#2f343a"
+urgent.background	= "#900000"
+urgent.text			= "#ffffff"
+urgent.indicator	= "#900000"
+urgent.child_border = "#900000"
+placeholder.border			= "#000000"
+placeholder.background		= "#0c0c0c"
+placeholder.text			= "#ffffff"
+placeholder.indicator		= "#000000"
+placehodler.child_border	= "#0c0c0c"
+background = "#ffffff"
+
+[waybar]
+enable		= false
+warning		= "#A54242"
+caution		= "#45475a"
+performance = "#f5c2e7"
+audio		= "#cba6f7"
+misc		= "#94e2d5"
+date		= "#a6e3a1"
+work		= "#66a0cc"
+window		= "#66a0cc"
+resize		= "#eba0ac"
+process		= "#89b4fa"
+border		= "#285577"
+
+[rofi]
+enable						= false
+active-foreground			= "#65acff"
+selected-active-background	= "#4491ed"
+alternate-active-background	= "#4b5160"
+lightfg						= "#586875"
+lightbg						= "#eee8d5"
+accent-color				= "#66a0cc"
+border-color				= "#285577"
