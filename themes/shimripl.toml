@@ -1,5 +1,5 @@
 [sway]
-enable					= true
+enable					= false
 config_dir				= "$HOME/.config/i3/config"
 
 [sway.client]
@@ -31,7 +31,8 @@ placehodler.child_border	= "#0c0c0c"
 background = "#ffffff"
 
 [waybar]
-enable		= false
+enable		= true
+config_dir	= "$HOME/.config/waybar/style.css"
 warning		= "#A54242"
 caution		= "#45475a"
 performance = "#f5c2e7"
@@ -42,6 +43,7 @@ work		= "#66a0cc"
 window		= "#66a0cc"
 resize		= "#eba0ac"
 process		= "#89b4fa"
+#border		= "#285577"
 border		= "#285577"
 
 [rofi]

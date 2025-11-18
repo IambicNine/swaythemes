@@ -36,10 +36,45 @@ def update_sway(data):
     subprocess.run("swaymsg reload", shell=True)
     return
 
-def waybar_enabled(data):
+def update_waybar(data):
+    config_file = os.path.expanduser(os.path.expandvars(data["config_dir"]))
+    if not os.path.isfile(config_file):
+        print(f"waybar style.css does not exist")
+        exit(0)
+
+    with open(config_file, "r") as file:
+        lines = file.readlines()
+        file.close()
+
+    work = f"@define-color work\t{data['work']};\n"
+    window = f"@define-color window\t{data['window']};\n"
+    process = f"@define-color process\t{data['process']};\n"
+    border = f"@define-color border\t{data['border']};\n"
+
+    re_work = r"@define-color work"
+    re_window = r"@define-color window"
+    re_process = r"@define-color process"
+    re_border = r"@define-color border"
+
+    for i in range(len(lines)):
+        if re.search(re_work, lines[i]):
+            lines[i] = work
+        elif re.search(re_window, lines[i]):
+            lines[i] = window
+        elif re.search(re_process, lines[i]):
+            lines[i] = process
+        elif re.search(re_border, lines[i]):
+            lines[i] = border
+
+    with open(config_file, "w") as file:
+        file.write("".join(lines))
+        file.close()
+
+    # Restart waybar
+    subprocess.run("pkill waybar && waybar &", shell=True)
     return
 
-def rofi_enabled(data):
+def update_rofi(data):
     return
 
 if __name__ == "__main__":
