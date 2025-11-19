@@ -25,6 +25,8 @@ def update_sway(data):
         lines = file.readlines()
         file.close()
 
+    print("Updating sway config")
+
     f = data["client"]["focused"]
     focused_str = f"client.focused\t\t{f['border']} {f['background']} {f['text']} {f['indicator']} {f['child_border']}\n"
     for i in range(len(lines)):
@@ -49,6 +51,8 @@ def update_waybar(data):
     with open(config_file, "r") as file:
         lines = file.readlines()
         file.close()
+    
+    print("Updating waybar config")
 
     work = f"@define-color work\t{data['work']};\n"
     window = f"@define-color window\t{data['window']};\n"
@@ -89,6 +93,7 @@ def update_rofi(data):
         lines = file.readlines()
         file.close()
 
+    print("Updating rofi config")
     re_active_foreground = r"^active-foreground:\s+rgba"
     re_selected_active_background = r"selected-active-background:\s+rgba"
     re_alternate_active_background = r"alternate-active-background:\s+rgba"
@@ -177,7 +182,7 @@ def hex_to_rgba(color_str):
     blu_val_d = int(blu_val_x, 16)
     alp_val_d = int(alp_val_x, 16)
     alp_percent = math.floor((alp_val_d / 255) * 100)
-    print(f"{color_str} --> ({red_val_d}, {gre_val_d}, {blu_val_d}, {alp_percent}%)")
+    # print(f"{color_str} --> ({red_val_d}, {gre_val_d}, {blu_val_d}, {alp_percent}%)")
     output = (red_val_d, gre_val_d, blu_val_d, alp_percent)
     return output
 
