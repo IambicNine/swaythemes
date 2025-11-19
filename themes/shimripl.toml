@@ -1,6 +1,6 @@
 [sway]
 enable					= false
-config_dir				= "$HOME/.config/i3/config"
+config_file				= "$HOME/.config/i3/config"
 
 [sway.client]
 focused.border			= "#285577"
@@ -31,8 +31,8 @@ placehodler.child_border	= "#0c0c0c"
 background = "#ffffff"
 
 [waybar]
-enable		= true
-config_dir	= "$HOME/.config/waybar/style.css"
+enable		= false
+config_file	= "$HOME/.config/waybar/style.css"
 warning		= "#A54242"
 caution		= "#45475a"
 performance = "#f5c2e7"
@@ -43,15 +43,15 @@ work		= "#66a0cc"
 window		= "#66a0cc"
 resize		= "#eba0ac"
 process		= "#89b4fa"
-#border		= "#285577"
 border		= "#285577"
 
 [rofi]
-enable						= false
-active-foreground			= "#65acff"
-selected-active-background	= "#4491ed"
-alternate-active-background	= "#4b5160"
-lightfg						= "#586875"
-lightbg						= "#eee8d5"
-accent-color				= "#66a0cc"
-border-color				= "#285577"
+enable								= true
+config_file							= "$HOME/.config/rofi/custom_themes/template.rasi"
+active-foreground					= "#65acffff" #65acff
+selected-active-background			= "#4491edff" #4491ed
+alternate-active-background			= "#4b5160e3" #4b5160
+lightfg								= "#586875ff" #586875
+lightbg								= "#eee8d5ff" #eee8d5
+accent-color						= "#66a0ccff" #66a0cc
+border-color						= "#285577ff" #285577
