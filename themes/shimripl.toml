@@ -1,5 +1,5 @@
 [sway]
-enable					= false
+enable					= true
 config_file				= "$HOME/.config/i3/config"
 
 [sway.client]
