@@ -126,20 +126,30 @@ def update_rofi(data, filename):
     ac_str = f"\taccent-color:\trgba ({ac_rgba[0]}, {ac_rgba[1]}, {ac_rgba[2]}, {ac_rgba[3]}%);\n"
     bc_str = f"\tborder-color:\trgba ({bc_rgba[0]}, {bc_rgba[1]}, {bc_rgba[2]}, {bc_rgba[3]}%);\n"
 
+    def debug_smg(line_found, line_replacement):
+        print(f"Found {line_found}replacing with {line_replacement}")
+
     for i, line in enumerate(lines):
         if re.search(re_active_foreground, line):
+            debug_smg(lines[i], af_str)
             lines[i] = af_str
         elif re.search(re_selected_active_background, line):
+            debug_smg(lines[i], sab_str)
             lines[i] = sab_str
         elif re.search(re_alternate_active_background, line):
+            debug_smg(lines[i], aab_str)
             lines[i] = aab_str
         elif re.search(re_lightfg, line):
+            debug_smg(lines[i], lfg_str)
             lines[i] = lfg_str
         elif re.search(re_lightbg, line):
+            debug_smg(lines[i], lbg_str)
             lines[i] = lbg_str
         elif re.search(re_accent_color, line):
+            debug_smg(lines[i], ac_str)
             lines[i] = ac_str
         elif re.search(re_border_color, line):
+            debug_smg(lines[i], bc_str)
             lines[i] = bc_str
 
     with open(config_file, "w", encoding="utf-8") as file:
@@ -152,7 +162,7 @@ def update_rofi(data, filename):
 def check_hex(color_str, filename):
     preamble = f"{filename} has invalid entries ({color_str})"
     # Check that first character of string is an octothorpe
-    if isinstance(color_str, str):
+    if not isinstance(color_str, str):
         print(f"{preamble}(Was expecting RGB hex string of the format #XXXXXXXX)")
         return False
     if color_str[0] != "#":
