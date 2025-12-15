@@ -118,13 +118,13 @@ def update_rofi(data, filename):
     ac_rgba = hex_to_rgba(ac_hex, filename)
     bc_rgba = hex_to_rgba(bc_hex, filename)
 
-    af_str = f"\tactive-foreground:\trgba({af_rgba[0]}, {af_rgba[1]}, {af_rgba[2]}, {af_rgba[3]}%);\n"
-    sab_str = f"\tselected-active-background:\trgba({sab_rgba[0]}, {sab_rgba[1]}, {sab_rgba[2]}, {sab_rgba[3]}%);\n"
-    aab_str = f"\talternate-active-background:\trgba({aab_rgba[0]}, {aab_rgba[1]}, {aab_rgba[2]}, {aab_rgba[3]}%);\n"
-    lfg_str = f"\tlightfg:\trgba({lfg_rgba[0]}, {lfg_rgba[1]}, {lfg_rgba[2]}, {lfg_rgba[3]}%);\n"
-    lbg_str = f"\tlightbg:\trgba({lbg_rgba[0]}, {lbg_rgba[1]}, {lbg_rgba[2]}, {lbg_rgba[3]}%);\n"
-    ac_str = f"\taccent-color:\trgba({ac_rgba[0]}, {ac_rgba[1]}, {ac_rgba[2]}, {ac_rgba[3]}%);\n"
-    bc_str = f"\tborder-color:\trgba({bc_rgba[0]}, {bc_rgba[1]}, {bc_rgba[2]}, {bc_rgba[3]}%);\n"
+    af_str = f"\tactive-foreground:\trgba ({af_rgba[0]}, {af_rgba[1]}, {af_rgba[2]}, {af_rgba[3]}%);\n"
+    sab_str = f"\tselected-active-background:\trgba ({sab_rgba[0]}, {sab_rgba[1]}, {sab_rgba[2]}, {sab_rgba[3]}%);\n"
+    aab_str = f"\talternate-active-background:\trgba ({aab_rgba[0]}, {aab_rgba[1]}, {aab_rgba[2]}, {aab_rgba[3]}%);\n"
+    lfg_str = f"\tlightfg:\trgba ({lfg_rgba[0]}, {lfg_rgba[1]}, {lfg_rgba[2]}, {lfg_rgba[3]}%);\n"
+    lbg_str = f"\tlightbg:\trgba ({lbg_rgba[0]}, {lbg_rgba[1]}, {lbg_rgba[2]}, {lbg_rgba[3]}%);\n"
+    ac_str = f"\taccent-color:\trgba ({ac_rgba[0]}, {ac_rgba[1]}, {ac_rgba[2]}, {ac_rgba[3]}%);\n"
+    bc_str = f"\tborder-color:\trgba ({bc_rgba[0]}, {bc_rgba[1]}, {bc_rgba[2]}, {bc_rgba[3]}%);\n"
 
     for i, line in enumerate(lines):
         if re.search(re_active_foreground, line):

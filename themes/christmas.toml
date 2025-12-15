@@ -3,11 +3,11 @@ enable					= true
 config_file				= "$HOME/.config/i3/config"
 
 [sway.client]
-focused.border			= "#285577"
+focused.border			= "#782929"
 focused.background		= "#222222"
-focused.text			= "#66a0cc"
-focused.indicator		= "#2d5f86"
-focused.child_border	= "#285577"
+focused.text			= "#cc6666"
+focused.indicator		= "#872e2e"
+focused.child_border	= "#782929"
 focused_inactive.border			= "#333333"
 focused_inactive.background		= "#5f676a"
 focused_inactive.text			= "#ffffff"
@@ -39,19 +39,19 @@ performance = "#f5c2e7"
 audio		= "#cba6f7"
 misc		= "#94e2d5"
 date		= "#a6e3a1"
-work		= "#66a0cc"
-window		= "#66a0cc"
+work		= "#cc6666"
+window		= "#cc6666"
 resize		= "#eba0ac"
-process		= "#89b4fa"
-border		= "#285577"
+process		= "#fa8989"
+border		= "#782929"
 
 [rofi]
 enable								= true
 config_file							= "$HOME/.config/rofi/custom_themes/template.rasi"
-active-foreground					= "#65acffff" #65acff
-selected-active-background			= "#4491edff" #4491ed
+active-foreground					= "#ff6666ff" #ff6666
+selected-active-background			= "#ed4545ff" #ed4545
 alternate-active-background			= "#4b5160e3" #4b5160
 lightfg								= "#586875ff" #586875
 lightbg								= "#eee8d5ff" #eee8d5
-accent-color						= "#66a0ccff" #66a0cc
-border-color						= "#285577ff" #285577
+accent-color						= "#cc6666ff" #cc6666
+border-color						= "#782929ff" #782929
